@@ -14,13 +14,11 @@ namespace Minimal.Core.Services.MovieUseCases
     {
         private readonly IRepository<Movie> _repository;
         private readonly ILogger<CreateMovieHandler> _logger;
-        private readonly IMediator _mediator;
 
-        public CreateMovieHandler(IRepository<Movie> repository, ILogger<CreateMovieHandler> logger, IMediator mediator)
+        public CreateMovieHandler(IRepository<Movie> repository, ILogger<CreateMovieHandler> logger)
         {
             _repository = repository;
             _logger = logger;
-            _mediator = mediator;
 
         }
         public async Task<BaseResponseDto<bool>> Handle(CreateMovieRequest request, CancellationToken cancellationToken)
