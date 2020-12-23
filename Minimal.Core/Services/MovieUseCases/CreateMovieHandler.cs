@@ -19,8 +19,8 @@ namespace Minimal.Core.Services.MovieUseCases
         {
             _repository = repository;
             _logger = logger;
-
         }
+
         public async Task<BaseResponseDto<bool>> Handle(CreateMovieRequest request, CancellationToken cancellationToken)
         {
             BaseResponseDto<bool> response = new();

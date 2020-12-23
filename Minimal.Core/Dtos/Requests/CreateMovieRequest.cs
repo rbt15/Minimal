@@ -1,7 +1,4 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Minimal.Core.Dtos.Requests
 {
@@ -9,6 +6,5 @@ namespace Minimal.Core.Dtos.Requests
     {
         public string Name { get; set; }
         public double Rating { get; set; }
-
     }
 }

@@ -7,13 +7,12 @@ using Minimal.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Minimal.Core.Services.MovieUseCases
 {
-    class GetBestMoviesForKidsHandler : IRequestHandler<GetBestMoviesForKidsRequest, BaseResponseDto<List<MovieDto>>>
+    internal class GetBestMoviesForKidsHandler : IRequestHandler<GetBestMoviesForKidsRequest, BaseResponseDto<List<MovieDto>>>
     {
         private readonly IRepository<Movie> _repository;
         private readonly ILogger _logger;
@@ -23,6 +22,7 @@ namespace Minimal.Core.Services.MovieUseCases
             _repository = repository;
             _logger = logger;
         }
+
         public async Task<BaseResponseDto<List<MovieDto>>> Handle(GetBestMoviesForKidsRequest request, CancellationToken cancellationToken)
         {
             BaseResponseDto<List<MovieDto>> response = new();

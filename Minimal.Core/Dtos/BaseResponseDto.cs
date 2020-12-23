@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Minimal.Core.Dtos
 {
@@ -11,6 +9,7 @@ namespace Minimal.Core.Dtos
         {
             Errors = new List<string>();
         }
+
         public bool HasError => Errors.Any();
         public List<string> Errors { get; set; }
         public int Total { get; set; }

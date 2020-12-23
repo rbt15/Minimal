@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Minimal.Core.Models
+﻿namespace Minimal.Core.Models
 {
     public class Movie : EntityBase
     {
