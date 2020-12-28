@@ -15,9 +15,9 @@ namespace Minimal.Core.Services.MovieUseCases
     internal class GetBestMoviesForKidsHandler : IRequestHandler<GetBestMoviesForKidsRequest, BaseResponseDto<List<MovieDto>>>
     {
         private readonly IRepository<Movie> _repository;
-        private readonly ILogger _logger;
+        private readonly ILogger<GetBestMoviesForKidsHandler> _logger;
 
-        public GetBestMoviesForKidsHandler(IRepository<Movie> repository, ILogger logger)
+        public GetBestMoviesForKidsHandler(IRepository<Movie> repository, ILogger<GetBestMoviesForKidsHandler> logger)
         {
             _repository = repository;
             _logger = logger;
