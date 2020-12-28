@@ -32,6 +32,11 @@ namespace Minimal.Infrastructure.Repositories
             return await _dbSet.Where(predicate).ToListAsync();
         }
 
+        public async Task<IEnumerable<T>> GetAllAsync()
+        {
+            return await _dbSet.ToListAsync();
+        }
+
         private bool _disposed = false;
         protected virtual void Dispose(bool disposing)
         {

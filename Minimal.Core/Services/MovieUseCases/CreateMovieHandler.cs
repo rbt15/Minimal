@@ -31,6 +31,7 @@ namespace Minimal.Core.Services.MovieUseCases
                 {
                     Name = request.Name,
                     Rating = request.Rating,
+                    AgeGroup = request.AgeGroup,
                     IsDeleted = false,
                     CreatedAt = DateTime.Now
                 };

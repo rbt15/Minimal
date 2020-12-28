@@ -50,5 +50,20 @@ namespace Minimal.API.Controllers
                 return BadRequest(getBestMovieForKidsResponse.Errors);
             }
         }
+
+        [HttpGet("movies")]
+        public async Task<ActionResult<List<MovieDto>>> GetAllMoviesAsync()
+        {
+            BaseResponseDto<List<MovieDto>> getAllMoviesResponse = await _mediator.Send(new GetAllMoviesRequest());
+
+            if (!getAllMoviesResponse.HasError)
+            {
+                return Ok(getAllMoviesResponse.Data);
+            }
+            else
+            {
+                return BadRequest(getAllMoviesResponse.Errors);
+            }
+        }
     }
 }

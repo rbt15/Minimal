@@ -11,5 +11,7 @@ namespace Minimal.Core.Interfaces
         Task CreateAsync(T entity);
 
         Task<IEnumerable<T>> GetWhereAsync(Expression<Func<T, bool>> predicate);
+
+        Task<IEnumerable<T>> GetAllAsync();
     }
 }
